@@ -47,7 +47,14 @@ def comprimir_imagens_pag():
 
 
         # Descargar archivo
-        st.download_button("Descargar", data=buffer, file_name="Imagen_comprimida.jpg" , mime="image/jpg")        
+        ext = ".jpeg"
+        nombre_archivo = st.text_input("Para Descargar ingresa el nombre del archivo")
+
+        if nombre_archivo:
+            nombre_archivo = nombre_archivo + ext
+            st.download_button("Descargar", data=buffer, file_name = nombre_archivo , mime="image/jpg")
+        else:
+            st.warning("Ingresar un nombre")     
 
     else:
         st.warning("Subir una foto")
