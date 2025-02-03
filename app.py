@@ -32,9 +32,11 @@ def paginas():
 
     # --- Crea el objeto multipagina --- 
     pg = st.navigation(pages)
-    pg.run()
+
+    return pg
 
 
 if __name__ == "__main__":
     configuraciones()
-    paginas()
+    pg = paginas()
+    pg.run()
