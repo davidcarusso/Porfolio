@@ -66,7 +66,7 @@ def comprimir_imagens_pag():
   
 
     else:
-        st.warning("📷 Subir una foto")
+        st.info("📷 Subir una foto")
 
 
 

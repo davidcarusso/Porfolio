@@ -15,25 +15,27 @@ def cargar_datos():
     return df
 
 df = cargar_datos()
+df["Mes"] = df["Fecha"].dt.month_name(locale="es")
+df["Year"] = df["Fecha"].dt.year
 
 
 # 2. Widgets interactivos en sidebar
 with st.sidebar:
     st.header("Filtros")
     categorias_seleccionada = st.multiselect("Categorias", options=df["Categoria"].unique(), default=df["Categoria"].unique())
-    rango_fechas = st.date_input("Rango de Fechas", value=[df["Fecha"].min(), df["Fecha"].max() ])
-
-
+    
+    #filtro de fechas
+    year = st.selectbox("year", options= sorted( df["Year"].unique() ), index=None )
+    mes = st.selectbox("Mes", options= sorted (df["Mes"].unique() ), index=None)
+    rango_fechas = st.date_input("Rango de Fechas", min_value=df["Fecha"].min(), max_value=df["Fecha"].max() , value=[df["Fecha"].min(), df["Fecha"].max()], format="DD/MM/YYYY" )
+    
 
 # 3. Filtrar datos
 df_filtrado = df[
     (df["Categoria"].isin(categorias_seleccionada) ) &
-    (df["Fecha"].between(pd.to_datetime(rango_fechas[0]), pd.to_datetime(rango_fechas[1]) ) )
+    (df["Fecha"].between(pd.to_datetime(rango_fechas[0]), pd.to_datetime(rango_fechas[1]) ) ) &
+    (df["Mes"] == (mes) )
 ]
-
-# st.dataframe(df)
-# st.write(df_filtrado)
-
 
 # 4. Gráficos interactivos
 tab1, tab2, tab3, tab4, tab5 = st.tabs(["Series Temporales", "Geográfico", "Relaciones", "Distribución", "Otros Graficos"]) 

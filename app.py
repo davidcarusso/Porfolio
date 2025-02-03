@@ -3,7 +3,9 @@ import streamlit as st
 
 # --- Configuracion de Pagina ---
 def configuraciones():
-    st.set_page_config(page_title="David Carusso")
+    st.set_page_config(
+        page_title="David Carusso",
+        initial_sidebar_state="expanded")
 
  
 # --- Crea el objeto pagina para luego agrupparlos --- 

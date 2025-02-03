@@ -1,21 +1,68 @@
 import streamlit as st
 from PIL import Image
 
+# Estilos CSS para redondear la imagen
+st.markdown("""
+    <style>
+        img {
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        [data-testid="stImage"] {
+            text-align: center;
+        }
+        .boton-contacto {
+            text-align: center;
+        }
+
+    </style>
+""", unsafe_allow_html=True)
+
+
 
 st.write("# Acerca de mi")
 
 col1 , col2 = st.columns([1,2])
 
-with col1: 
-    imagen_cara = Image.open("image/foto_personal.jpg")
-    st.image(imagen_cara)
+with col1:
+
+    imagen_cara = Image.open("image/Carusso.jpeg")
+    st.image(imagen_cara,  caption="David Carusso | Data Analyst")
 
 
 with col2:
+    st.markdown("""
+        ## 👋 Hola! Soy **David Carusso**
+        **💻 Desarrollador Python | 📊 Analista de Datos**
+        
+        ### Habilidades Técnicas:
+        - 🐼 Procesamiento de datos con Pandas
+        - 📈 Visualizaciones 
+        - 🚀 Desarrollo de aplicaciones con Streamlit
+        - 📊 Business Intelligence con Power BI
+        
+        ### En constante aprendizaje...
+        """)
+
+    st.markdown('<div class="boton-contacto">', unsafe_allow_html=True)
+    st.link_button(
+        "📬 Contacto", 
+        "https://www.linkedin.com/in/davidcarusso/",
+        help="Haz click para visitar mi perfil profesional.",
+        type="secondary" )  # lo envia a otra pestaña, sin cerrar la principal
+    st.markdown("</div>", unsafe_allow_html=True)
+
+
+# Footer con badges
+st.divider()
+cols = st.columns(5)
+with cols[0]:
+    st.markdown("[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/davidcarusso)")
+#Añadir más badges según necesites
+
+# Sección de certificaciones
+with st.expander("📚 Certificaciones y Cursos"):
     st.write("""
-             👋 Hola! Soy David Carusso 💻 
-             Desarrollador en Python y analista de datos. 📊 
-             
-             - Uso pandas, Seaborn, Streamlit y Power BI. """)
-    st.write("🚀 Aprendiendo cada día.")
-    st.button("### Contacto")
+    - Microsoft Power BI Certification (Censosud)
+    - Python for Data Science (Platzy)
+    """)
