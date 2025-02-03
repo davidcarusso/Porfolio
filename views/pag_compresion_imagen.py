@@ -4,9 +4,26 @@ import io
 
 
 
+def descargar_foto(buffer):
+    """
+    Ingresa un buffer que el la imagen comprimida para descargar
+    
+    """
+
+    # Descargar archivo
+    ext = ".jpeg"
+    nombre_archivo = st.text_input("Para Descargar ingresa el nombre del archivo")
+
+    if nombre_archivo:
+        nombre_archivo = nombre_archivo + ext
+        st.download_button("Descargar", data=buffer, file_name = nombre_archivo , mime="image/jpg")
+    else:
+        st.warning("Ingresar un nombre") 
+
+
+
 def comprimir_imagens_pag():
     st.write("# Aplicacion de imagenes")
-
 
     archivo = st.file_uploader("Ingrese una imagen", type=["jpg", "jpeg"])
 
@@ -45,19 +62,13 @@ def comprimir_imagens_pag():
                     "Diferencia" : f"{diferencia_porcentual} %"}
                 )
 
-
-        # Descargar archivo
-        ext = ".jpeg"
-        nombre_archivo = st.text_input("Para Descargar ingresa el nombre del archivo")
-
-        if nombre_archivo:
-            nombre_archivo = nombre_archivo + ext
-            st.download_button("Descargar", data=buffer, file_name = nombre_archivo , mime="image/jpg")
-        else:
-            st.warning("Ingresar un nombre")     
+        descargar_foto(buffer)
+  
 
     else:
-        st.warning("Subir una foto")
+        st.warning("📷 Subir una foto")
+
+
 
 
 comprimir_imagens_pag()
