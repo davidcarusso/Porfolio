@@ -1,10 +1,11 @@
 import streamlit as st 
 import pandas as pd
 import plotly.express as px
+import locale
 
 from scripts.datos_ejemplo import generar_datos
 
-
+locale.setlocale(locale.LC_ALL, "")
 
 st.title("Dashboard de ventas")
 
