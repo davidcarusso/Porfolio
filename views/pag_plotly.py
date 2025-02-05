@@ -1,11 +1,8 @@
 import streamlit as st 
 import pandas as pd
 import plotly.express as px
-import locale
 
 from scripts.datos_ejemplo import generar_datos
-
-locale.setlocale(locale.LC_ALL, "")
 
 st.title("Dashboard de ventas")
 
@@ -16,7 +13,7 @@ def cargar_datos():
     return df
 
 df = cargar_datos()
-df["Mes"] = df["Fecha"].dt.month_name(locale="es")
+df["Mes"] = df["Fecha"].dt.month_name()
 df["Year"] = df["Fecha"].dt.year
 
 
