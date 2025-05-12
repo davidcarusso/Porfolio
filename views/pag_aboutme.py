@@ -1,6 +1,9 @@
 import streamlit as st
 from PIL import Image
 
+imagen_perfil_linkedn = "https://media.licdn.com/dms/image/v2/D4D03AQGckbHJt1p9yw/profile-displayphoto-shrink_200_200/B4DZZa1GXoGgAc-/0/1745280592278?e=1752710400&v=beta&t=I_hj0KFQCseafzsDmUKz2nujeqvLiKhzMci9QBBYT_s"
+
+
 # Estilos CSS para redondear la imagen
 st.markdown("""
     <style>
@@ -26,8 +29,8 @@ col1 , col2 = st.columns([1,2])
 
 with col1:
 
-    imagen_cara = Image.open("image/Carusso.jpeg")
-    st.image(imagen_cara,  caption="David Carusso | Data Analyst")
+    #imagen_cara = Image.open("image/Carusso.jpeg")
+    st.image(imagen_perfil_linkedn,  caption="David Carusso | Data Analyst")
 
 
 with col2:
