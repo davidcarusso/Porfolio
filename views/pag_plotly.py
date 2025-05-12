@@ -23,8 +23,8 @@ with st.sidebar:
     categorias_seleccionada = st.multiselect("Categorias", options=df["Categoria"].unique(), default=df["Categoria"].unique())
     
     #filtro de fechas
-    year = st.selectbox("year", options= sorted( df["Year"].unique() ), index=None )
-    mes = st.selectbox("Mes", options= sorted (df["Mes"].unique() ), index=None)
+    year = st.selectbox("year", options= sorted( df["Year"].unique() ))
+    mes = st.selectbox("Mes", options= sorted (df["Mes"].unique() ))
     rango_fechas = st.date_input("Rango de Fechas", min_value=df["Fecha"].min(), max_value=df["Fecha"].max() , value=[df["Fecha"].min(), df["Fecha"].max()], format="DD/MM/YYYY" )
     
 
