@@ -25,11 +25,18 @@ def paginas():
     page="views/pag_plotly.py",
     title="Graficos Plotly"
     )
+    
+    pagina_4 = st.Page(
+    page="views/pag_costo_universidades.py",
+    title="Costo Universidades"
+    )
+    
+    
 
     # --- Crear un diccionario para agrupar en un indice --- 
     pages =  {
     "Informacion" : [pagina_1] , 
-    "Proyectos" : [pagina_2, pagina_3]
+    "Proyectos" : [pagina_2, pagina_3, pagina_4]
     }
 
     # --- Crea el objeto multipagina --- 
