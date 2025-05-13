@@ -42,15 +42,15 @@ def tabla_completa():
     with tab1:
         df_universidad_paises = df["Country"].value_counts().reset_index()
         fig_histo = px.histogram(df_universidad_paises, x="Country", y="count" ,title="Cantidad por pais")
-        st.plotly_chart(fig_histo)
+        st.plotly_chart(fig_histo,use_container_width=True)
         
         fig = px.box(df ,x="University", y="Costo Carrera Final", color="Country")
-        st.plotly_chart(fig)
+        st.plotly_chart(fig, use_container_width=True)
 
     
     with tab2:
         fig = px.sunburst(df,path= ["Country"] ,values="Costo Carrera Final" , title="Costo Final por paises")
-        st.plotly_chart(fig)
+        st.plotly_chart(fig, use_container_width=True)
     
     with tab3:   
         df_carreras = df["Program"].value_counts().reset_index()
@@ -59,19 +59,13 @@ def tabla_completa():
         st.plotly_chart(fig_histo_carreras)
         
         fig = px.box(df, x="Country", y="Costo Carrera Final", color="Program", title="Costo de carrera por paises")
-        st.plotly_chart(fig)
+        st.plotly_chart(fig, use_container_width=True)
         
     with tab4:
         st.write("## Tabla completa")
         st.write(df)
     
 
-    
-
-    
-
-    
- 
 
 def costo_por_pais():
     
@@ -109,10 +103,3 @@ if pais:
     
 else:
     tabla_completa()
-    
-
-
-    
-    
-    
-    
