@@ -36,7 +36,8 @@ def paginas():
     # --- Crear un diccionario para agrupar en un indice --- 
     pages =  {
     "Informacion" : [pagina_1] , 
-    "Proyectos" : [pagina_2, pagina_3, pagina_4]
+    "Herramientas" : [pagina_2 ], 
+    "Analisis de Datos": [pagina_3, pagina_4]
     }
 
     # --- Crea el objeto multipagina --- 
