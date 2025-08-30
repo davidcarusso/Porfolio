@@ -1,4 +1,4 @@
-# 📊 Portfolio de Proyectos – David Caruso
+# 📊 Portfolio de Proyectos – David Carusso
 
 ¡Bienvenido/a a mi portfolio de proyectos de análisis de datos e inteligencia de negocios!  
 Este repositorio resume mi trabajo en el mundo de los datos, utilizando Python, Streamlit, Power BI y herramientas de visualización para resolver problemas reales y generar valor a partir de la información.
