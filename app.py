@@ -5,7 +5,7 @@ import streamlit as st
 def configuraciones():
     st.set_page_config(
         page_title="David Carusso",
-        page_icon= "🐼" ,
+        page_icon= "📊" ,
         initial_sidebar_state="expanded")
 
  
