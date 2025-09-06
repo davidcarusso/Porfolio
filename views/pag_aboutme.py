@@ -39,10 +39,10 @@ with col2:
         **💻 Desarrollador Python | 📊 Analista de Datos**
         
         ### Habilidades Técnicas:
-        - 🐼 Procesamiento de datos con Pandas  
-        - 📈 Visualizaciones  
-        - 🚀 Desarrollo de aplicaciones con Streamlit  
-        - 📊 Business Intelligence con Power BI  
+        - 🐼 Procesamiento de datos con Pandas.  
+        - 📈 Visualizaciones.
+        - 🚀 Desarrollo de aplicaciones con Streamlit.  
+        - 📊 Business Intelligence con Power BI.  
 
         ### Habilidades Blandas (Soft Skills):
         - 🤝 Trabajo en equipo  
