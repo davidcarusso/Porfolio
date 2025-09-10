@@ -1,2 +1,11 @@
 [theme]
 base="dark"  # Puede ser "light" o "dark"
+
+
+
+[server]
+headless = true
+enableCORS = false
+port = 80
+address = "0.0.0.0"
+
