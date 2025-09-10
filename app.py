@@ -6,7 +6,7 @@ def configuraciones():
     st.set_page_config(
         page_title="David Carusso",
         page_icon= "📊" ,
-        initial_sidebar_state="expanded")
+        initial_sidebar_state="auto")
 
  
 # --- Crea el objeto pagina para luego agrupparlos --- 
@@ -42,7 +42,7 @@ def paginas():
     }
 
     # --- Crea el objeto multipagina --- 
-    pg = st.navigation(pages)
+    pg = st.navigation(pages, position="top")
 
     return pg
 

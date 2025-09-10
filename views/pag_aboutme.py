@@ -8,7 +8,7 @@ imagen_perfil_linkedn = "https://media.licdn.com/dms/image/v2/D4D03AQGckbHJt1p9y
 st.markdown("""
     <style>
         img {
-            border-radius: 50%;
+            border-radius: 500%;
             object-fit: cover;
         }
         [data-testid="stImage"] {
@@ -25,35 +25,30 @@ st.markdown("""
 
 st.write("# Acerca de mi")
 
-col1 , col2 = st.columns([1,2])
+col1 , col2 = st.columns([2,1])
 
 with col1:
 
-    #imagen_cara = Image.open("image/Carusso.jpeg")
-    st.image(imagen_perfil_linkedn,  caption="David Carusso | Data Analyst")
-
-
-with col2:
     st.markdown("""
-        ## 👋 Hola! Soy **David Carusso**
-        **💻 Desarrollador Python | 📊 Analista de Datos**
-        
-        ### Habilidades Técnicas:
-        - 🐼 Procesamiento de datos con Pandas.  
-        - 📈 Visualizaciones.
-        - 🚀 Desarrollo de aplicaciones con Streamlit.  
-        - 📊 Business Intelligence con Power BI.  
+            ## 👋 Hola! Soy **David Carusso**
+            **💻 Desarrollador Python | 📊 Analista de Datos**
+            
+            ### Habilidades Técnicas:
+            - 🐼 Procesamiento de datos con Pandas.  
+            - 📈 Visualizaciones.
+            - 🚀 Desarrollo de aplicaciones con Streamlit.  
+            - 📊 Business Intelligence con Power BI.  
 
-        ### Habilidades Blandas (Soft Skills):
-        - 🤝 Trabajo en equipo  
-        - 🧩 Resolución de problemas  
-        - 🎯 Pensamiento analítico  
-        - 💡 Creatividad e innovación  
-        - 🗣️ Comunicación efectiva  
-        - ⏱️ Gestión del tiempo  
+            ### Habilidades Blandas (Soft Skills):
+            - 🤝 Trabajo en equipo  
+            - 🧩 Resolución de problemas  
+            - 🎯 Pensamiento analítico  
+            - 💡 Creatividad e innovación  
+            - 🗣️ Comunicación efectiva  
+            - ⏱️ Gestión del tiempo  
 
-        ### En constante aprendizaje...
-        """)
+            ### En constante aprendizaje...
+            """)
 
     st.markdown('<div class="boton-contacto">', unsafe_allow_html=True)
     st.link_button(
@@ -62,6 +57,11 @@ with col2:
         help="Haz click para visitar mi perfil profesional.",
         type="secondary" )  # lo envia a otra pestaña, sin cerrar la principal
     st.markdown("</div>", unsafe_allow_html=True)
+
+
+with col2:    
+    #imagen_cara = Image.open("image/Carusso.jpeg")
+    st.image(imagen_perfil_linkedn,  caption="David Carusso | Data Analyst")
 
 
 # Footer con badges
