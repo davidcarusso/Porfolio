@@ -31,6 +31,11 @@ def paginas():
     page="views/pag_costo_universidades.py",
     title="Costo Universidades"
     )
+
+    pagina_5 = st.Page(
+    page= "views/powerapps.py",
+    title= "Apps Comercial Presencial" 
+    )
     
     
 
@@ -38,7 +43,8 @@ def paginas():
     pages =  {
     "Informacion" : [pagina_1] , 
     "Herramientas" : [pagina_2 ], 
-    "Analisis de Datos": [pagina_3, pagina_4]
+    "Analisis de Datos": [pagina_3, pagina_4],
+    "PowerApps Tools": [pagina_5]
     }
 
     # --- Crea el objeto multipagina --- 
