@@ -1,2 +1,21 @@
+[browser]
+serverAddress = "davidcarusso.com.ar"
+gatherUsageStats = false
+
+[server]
+port = 8501
+enableCORS = false
+enableXsrfProtection = true
+maxUploadSize = 200
+headless = true
+
 [theme]
-base="dark"  # Puede ser "light" o "dark"
+primaryColor = "#667eea"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f8f9fa"
+textColor = "#262730"
+font = "sans serif"
+
+[client]
+showErrorDetails = false
+toolbarMode = "minimal"
