@@ -1,5 +1,108 @@
 import streamlit as st
 
+# ========== SEO y Meta Tags ==========
+st.markdown("""
+    <!-- Meta Tags para SEO -->
+    <meta name="description" content="Consultor de Business Intelligence en Buenos Aires. Dashboards interactivos con Streamlit y Power BI. Análisis de datos personalizados para PyMEs. Primera consulta gratis.">
+    <meta name="keywords" content="consultor business intelligence, dashboards streamlit, power bi buenos aires, análisis de datos python, visualización de datos, automatización reportes, consultor bi zona sur, desarrollador python buenos aires">
+    <meta name="author" content="David Carusso">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Spanish">
+    <meta name="geo.region" content="AR-B">
+    <meta name="geo.placename" content="Buenos Aires">
+    
+    <!-- Open Graph para redes sociales -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="David Carusso - Consultor BI & Dashboards | Buenos Aires">
+    <meta property="og:description" content="Transformá tus datos en decisiones estratégicas. Dashboards interactivos y análisis personalizados con Python y Power BI.">
+    <meta property="og:url" content="https://davidcarusso.com.ar">
+    <meta property="og:site_name" content="David Carusso Portfolio">
+    <meta property="og:locale" content="es_AR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="David Carusso - Consultor BI & Dashboards">
+    <meta name="twitter:description" content="Dashboards interactivos con Streamlit y Power BI en Buenos Aires">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://davidcarusso.com.ar">
+    
+    <!-- Schema.org para Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "David Carusso - Consultoría BI",
+      "image": "https://davidcarusso.com.ar/logo.png",
+      "description": "Consultor de Business Intelligence especializado en dashboards interactivos con Streamlit y Power BI en Buenos Aires",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Buenos Aires",
+        "addressRegion": "Buenos Aires",
+        "addressCountry": "AR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.6037,
+        "longitude": -58.3816
+      },
+      "url": "https://davidcarusso.com.ar",
+      "telephone": "+5491150419371",
+      "email": "david.ismael.carusso@gmail.com",
+      "priceRange": "$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/davidcarusso/",
+        "https://github.com/davidcarusso"
+      ],
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": -34.6037,
+          "longitude": -58.3816
+        },
+        "geoRadius": "50000"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de Business Intelligence",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Dashboards Interactivos",
+              "description": "Visualizaciones dinámicas con Streamlit y Plotly"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Business Intelligence",
+              "description": "Análisis profundo de datos con Power BI y Python"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Automatización de Procesos",
+              "description": "Scripts personalizados para eliminar tareas repetitivas"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+""", unsafe_allow_html=True)
+
 # CSS personalizado para la landing
 st.markdown("""
     <style>
