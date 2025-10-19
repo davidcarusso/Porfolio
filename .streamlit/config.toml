@@ -10,11 +10,13 @@ maxUploadSize = 200
 headless = true
 
 [theme]
+base="dark"
 primaryColor = "#667eea"
-backgroundColor = "#ffffff"
-secondaryBackgroundColor = "#f8f9fa"
-textColor = "#262730"
+backgroundColor = "#0e1117"
+secondaryBackgroundColor = "#262730"
+textColor = "#fafafa"
 font = "sans serif"
+
 
 [client]
 showErrorDetails = false

@@ -112,7 +112,7 @@ st.markdown("""
             padding: 3rem 1rem;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             border-radius: 10px;
-            color: white;
+            color: #fafafa;
             margin-bottom: 2rem;
         }
         .hero-title {
@@ -123,12 +123,13 @@ st.markdown("""
         .hero-subtitle {
             font-size: 1.3rem;
             margin-bottom: 2rem;
-            opacity: 0.95;
+            opacity: 0.9;
         }
         
         /* Sección de servicios */
         .service-card {
-            background: #f8f9fa;
+            background: #262730; /* secondaryBackgroundColor */
+            color: #fafafa;
             padding: 1.5rem;
             border-radius: 8px;
             border-left: 4px solid #667eea;
@@ -149,29 +150,32 @@ st.markdown("""
         .stat-box {
             text-align: center;
             padding: 1rem;
-            background: #f8f9fa;
+            background: #262730; /* secondaryBackgroundColor */
             border-radius: 8px;
         }
         .stat-number {
             font-size: 2rem;
             font-weight: 700;
-            color: #667eea;
+            color: #667eea; /* primaryColor */
         }
         .stat-label {
             font-size: 0.9rem;
-            color: #6c757d;
+            color: #a0a0a0; /* gris claro para contraste */
         }
         
         /* Testimonials */
         .testimonial {
-            background: #fff;
+            background: #1e1e1e; /* un poco más claro que el fondo base */
+            color: #fafafa;
             padding: 1.5rem;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.4);
             margin-bottom: 1rem;
         }
     </style>
 """, unsafe_allow_html=True)
+
+
 
 # Hero Section
 st.markdown("""
@@ -399,12 +403,23 @@ st.markdown("## 🚀 ¿Listo para empezar?")
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
     st.markdown("""
-        <div style="text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 10px;">
-            <h3>Primera consulta sin cargo</h3>
-            <p>Hablemos de tu proyecto y veamos cómo puedo ayudarte</p>
+        <div style="
+            text-align: center; 
+            padding: 2rem; 
+            background: #262730; 
+            border-radius: 12px;
+            color: #fafafa;
+            font-family: 'Segoe UI', sans-serif;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        ">
+            <h3 style="margin-bottom: 0.5rem;">Primera consulta sin cargo</h3>
+            <p style="margin-bottom: 1.5rem;">Hablemos de tu proyecto y veamos cómo puedo ayudarte</p>
         </div>
     """, unsafe_allow_html=True)
-    
+
+    # Separador visual
+    st.write("")
+
     col_final1, col_final2 = st.columns(2)
     with col_final1:
         st.link_button(
@@ -419,6 +434,7 @@ with col2:
             "mailto:david.ismael.carusso@gmail.com",
             use_container_width=True
         )
+
 
 # Footer
 st.divider()
