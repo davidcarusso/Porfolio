@@ -1,9 +1,11 @@
 [browser]
 serverAddress = "davidcarusso.com.ar"
 gatherUsageStats = false
+serverPort = 443
 
 [server]
 port = 8501
+address = "0.0.0.0"
 enableCORS = false
 enableXsrfProtection = true
 maxUploadSize = 200
@@ -17,7 +19,36 @@ secondaryBackgroundColor = "#262730"
 textColor = "#fafafa"
 font = "sans serif"
 
-
 [client]
 showErrorDetails = false
 toolbarMode = "minimal"
+
+# CRÍTICO: Deshabilitar CORS cuando usas proxy
+enableCORS = false
+enableXsrfProtection = false
+
+# Websocket configuration
+enableWebsocketCompression = true
+
+# Límites
+maxUploadSize = 200
+maxMessageSize = 200
+
+[browser]
+# Desactivar telemetría para mejor performance
+gatherUsageStats = false
+
+[client]
+# Modo de toolbar minimalista
+toolbarMode = "minimal"
+
+# Ocultar detalles de error en producción
+showErrorDetails = false
+
+[logger]
+# Nivel de logging (en producción usa "warning" o "error")
+level = "info"
+
+[runner]
+# Mejora la velocidad de re-ejecución
+fastReruns = true
